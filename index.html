@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nirmal Enterprise — Shuttering & Formwork</title>
+  <meta name="description" content="Nirmal Enterprise - Reliable shuttering & formwork contractor in Mumbai & Kalyan. Contact: +91 91670 04003" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#14304a; /* deep blue */
+      --accent:#f5a623; /* orange/yellow for CTA */
+      --muted:#f4f6f7;
+      --text:#202124;
+      --max-width:1200px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial; margin:0; color:var(--text); background:#fff}
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max-width); margin:0 auto; padding:0 20px}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:60; background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,255,255,0.9)); box-shadow:0 4px 12px rgba(20,48,74,0.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo-mark{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--primary),#2b5b7a);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:Montserrat}
+    .site-title{font-family:Montserrat;font-size:18px;color:var(--primary)}
+
+    .nav-links{display:flex; gap:18px; align-items:center}
+    .nav-links a{padding:8px 6px; font-weight:500}
+    .phone{display:flex; align-items:center; gap:8px; background:var(--primary); color:#fff; padding:8px 12px; border-radius:8px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:center; padding:36px 0}
+    .slider{position:relative; border-radius:12px; overflow:hidden; min-height:360px; background:var(--muted)}
+    .slide{position:absolute; inset:0; display:flex; align-items:center; justify-content:flex-start; padding:32px; gap:18px; color:#fff; transition:opacity 0.9s ease; background-size:cover; background-position:center}
+    .slide .content{max-width:680px}
+    .slide h1{font-family:Montserrat; font-size:28px; margin:0 0 12px}
+    .slide p{margin:0 0 18px}
+    .cta{display:flex; gap:12px}
+    .btn{padding:10px 16px; border-radius:8px; font-weight:600; cursor:pointer}
+    .btn-primary{background:var(--accent); color:#000}
+    .btn-ghost{background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.18); color:#fff}
+
+    .hero-side{background:#fff; border-radius:12px; padding:18px; box-shadow:0 6px 18px rgba(12,30,50,0.06)}
+    .expert-list{display:flex; flex-direction:column; gap:10px}
+    .expert-item{display:flex; gap:12px; align-items:flex-start}
+    .expert-item .icon{width:44px;height:44;border-radius:8px;background:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary)}
+
+    /* Services */
+    .section{padding:44px 0}
+    .section h2{font-family:Montserrat;margin:0 0 16px}
+    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 8px 20px rgba(20,48,74,0.05)}
+
+    /* Gallery */
+    .gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:8px}
+    .gallery-grid img{width:100%; height:160px; object-fit:cover; border-radius:8px; cursor:pointer}
+
+    /* About & Contact */
+    .two-col{display:grid; grid-template-columns:1fr 420px; gap:28px}
+    form{display:flex; flex-direction:column; gap:12px}
+    input,textarea{padding:12px;border-radius:8px;border:1px solid #e6e9ee;font-size:14px}
+    button[type=submit]{background:var(--primary); color:#fff; padding:12px 16px; border-radius:8px; border:none; cursor:pointer}
+
+    footer{background:#0f1720;color:#fff;padding:20px 0;margin-top:24px}
+
+    /* Floating WhatsApp */
+    .floating{position:fixed; right:18px; bottom:18px; z-index:80}
+    .whatsapp{background:#25D366;color:#fff;padding:12px;border-radius:50px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 30px rgba(0,0,0,0.2)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .two-col{grid-template-columns:1fr}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .nav-links{display:none}
+    }
+    @media (max-width:520px){
+      .cards{grid-template-columns:1fr}
+      .gallery-grid img{height:120px}
+      .slide h1{font-size:20px}
+    }
+
+    /* Slider controls (small) */
+    .slider-dots{position:absolute;left:18px;bottom:18px;display:flex;gap:8px}
+    .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.6); cursor:pointer}
+    .dot.active{background:var(--accent)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo-mark">NE</div>
+        <div>
+          <div class="site-title">Nirmal Enterprise</div>
+          <div style="font-size:12px;color:#55656f">Shuttering · Formwork · Rental</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">हमारी सेवाएँ</a>
+        <a href="#projects">प्रोजेक्ट्स</a>
+        <a href="#about">हमारे बारे में</a>
+        <a href="#contact">संपर्क करें</a>
+      </nav>
+      <div class="phone">📞 +91 91670 04003</div>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="slider" aria-roledescription="carousel">
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556767576-5b988f4863d6?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b8c2a6b8a4a5f5b3ccc5e7c9e81e3b0');" data-index="0">
+          <div class="content">
+            <h1>निर्माण की नींव, गुणवत्ता की पहचान — Nirmal Enterprise</h1>
+            <p>मास्टर-लेवल शटरिंग और फॉर्मवर्क — समय पर डिलीवरी और त्रुटिरहित कार्य।</p>
+            <div class="cta">
+              <a class="btn btn-primary" href="#contact">अभी कोटेशन प्राप्त करें</a>
+              <a class="btn btn-ghost" href="#projects">हमारे प्रोजेक्ट्स देखें</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581092795360-6e90b6f0b8f8?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b2b4f8e4b5b9a7f3e4b3a2c9d8f9f6');opacity:0;" data-index="1">
+          <div class="content">
+            <h1>विश्वसनीय शटरिंग समाधान — समय पर डिलीवरी, त्रुटिरहित कार्य</h1>
+            <p>साइट से लेकर फिनिश तक, हर कदम पर हम आपके साथ हैं।</p>
+            <div class="cta">
+              <a class="btn btn-primary" href="tel:+919167004003">कॉल करें</a>
+              <a class="btn btn-ghost" href="#services">हमारी सेवाएँ</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c3d8d4f9c0a6d809b1d6a7c9a6e0f1b');opacity:0;" data-index="2">
+          <div class="content">
+            <h1>हर प्रोजेक्ट के लिए मजबूत और सुरक्षित फॉर्मवर्क</h1>
+            <p>कठोर सुरक्षा मानक और अनुभवी टीम के साथ।</p>
+            <div class="cta">
+              <a class="btn btn-primary" href="#contact">क्विक कोटेशन</a>
+              <a class="btn btn-ghost" href="#about">हमारे बारे में</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-dots" id="dots"></div>
+      </div>
+
+      <aside class="hero-side">
+        <h3 style="margin-top:0">हमारी विशेषज्ञता</h3>
+        <div class="expert-list">
+          <div class="expert-item"><div class="icon">⚡</div><div><strong>Speed & Efficiency</strong><div style="font-size:13px;color:#55656f">समय पर काम पूरा करना</div></div></div>
+          <div class="expert-item"><div class="icon">🛡️</div><div><strong>Safety Standards</strong><div style="font-size:13px;color:#55656f">उच्च सुरक्षा मानक</div></div></div>
+          <div class="expert-item"><div class="icon">💰</div><div><strong>Cost Effective</strong><div style="font-size:13px;color:#55656f">बजट के अनुकूल समाधान</div></div></div>
+          <div class="expert-item"><div class="icon">👷</div><div><strong>Experienced Team</strong><div style="font-size:13px;color:#55656f">प्रशिक्षित मिस्त्री और सुपरवाइज़र</div></div></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2>हमारी सेवाएँ</h2>
+        <p style="color:#55656f;margin-top:6px">व्यापक शटरिंग और फॉर्मवर्क सेवाएँ — कॉलम, बीम, स्लैब, दीवार और हाई-राइज प्रोजेक्ट्स।</p>
+        <div class="cards" style="margin-top:18px">
+          <div class="card">
+            <h3 style="margin:0 0 6px">Column Shuttering</h3>
+            <p style="margin:0;color:#55656f">हर साइज के कॉलम के लिए मजबूत फॉर्मवर्क और सटीक फिनिश।</p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 6px">Beam & Slab Shuttering</h3>
+            <p style="margin:0;color:#55656f">उच्च गुणवत्ता वाले फॉर्मवर्क के साथ चिकनी फिनिश।</p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 6px">Wall Shuttering</h3>
+            <p style="margin:0;color:#55656f">दीवारों के लिए टिकाऊ और सुरक्षित फॉर्मवर्क।</p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 6px">High Rise Projects</h3>
+            <p style="margin:0;color:#55656f">ऊंचाई वाले प्रोजेक्ट्स के लिए विशेष तकनीक और उपकरण।</p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 6px">Shuttering Rental</h3>
+            <p style="margin:0;color:#55656f">साइट पर शटरिंग सामग्री की लीज पर उपलब्धता।</p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 6px">Custom Solutions</h3>
+            <p style="margin:0;color:#55656f">प्रोजेक्ट के हिसाब से अनुकूल समाधान और सलाह।</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects / Gallery -->
+    <section class="section" id="projects">
+      <div>
+        <h2>गैलरी / प्रोजेक्ट्स</h2>
+        <p style="color:#55656f;margin-top:6px">कुछ चुनिंदा प्रोजेक्ट्स की तस्वीरें — उच्च गुणवत्ता में।</p>
+        <div class="gallery-grid" style="margin-top:18px">
+          <img src="https://images.unsplash.com/photo-1581093458400-7b8f2d6b1b3a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6a0c5b0f3b6f8b1a8c3e8b2d" alt="Project 1" data-caption="Residential Tower | Kalyan | 2024">
+          <img src="https://images.unsplash.com/photo-1556767576-5b988f4863d6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b8c2a6b8a4a5f5b3ccc5e7c" alt="Project 2" data-caption="Commercial Complex | Mumbai | 2023">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c3d8d4f9c0a6d809b1d6a7c" alt="Project 3" data-caption="High Rise | Thane | 2022">
+          <img src="https://images.unsplash.com/photo-1581092795360-6e90b6f0b8f8?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b2b4f8e4b5b9a7f3e4b3a2c" alt="Project 4" data-caption="Industrial Site | Navi Mumbai | 2024">
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Contact -->
+    <section class="section" id="about">
+      <div class="two-col">
+        <div>
+          <h2>हमारे बारे में</h2>
+          <p style="color:#55656f">Nirmal Enterprise मुंबई और कल्याण क्षेत्र में वर्षों से शटरिंग और फॉर्मवर्क सेवाएँ प्रदान कर रहा है। हमारा लक्ष्य है हर प्रोजेक्ट में गुणवत्ता, सुरक्षा और समयबद्धता सुनिश्चित करना।</p>
+          <p style="color:#55656f">हमारी टीम में अनुभवी सुपरवाइज़र और प्रशिक्षित मिस्त्री शामिल हैं जो साइट पर उच्च मानकों का पालन करते हैं।</p>
+
+          <h3 style="margin-top:12px">मूल्य</h3>
+          <ul style="color:#55656f">
+            <li>ईमानदारी</li>
+            <li>सुरक्षा</li>
+            <li>गुणवत्ता</li>
+            <li>ग्राहक संतुष्टि</li>
+          </ul>
+        </div>
+
+        <aside id="contact">
+          <h2>संपर्क करें</h2>
+          <form id="contactForm">
+            <input name="name" placeholder="आपका नाम" required />
+            <input name="email" type="email" placeholder="ईमेल (उदा. info@example.com)" />
+            <input name="phone" placeholder="फोन नंबर" required />
+            <textarea name="message" rows="5" placeholder="आपका संदेश" required></textarea>
+            <button type="submit">भेजें</button>
+            <div style="font-size:13px;color:#55656f;margin-top:8px">या कॉल करें: <strong>+91 91670 04003</strong></div>
+          </form>
+
+          <div style="margin-top:16px;background:#fbfbfb;border-radius:8px;padding:12px;font-size:14px;color:#55656f">
+            <strong>ईमेल</strong><br> info@nirmalenterprise.com<br><br>
+            <strong>पता</strong><br> (यहाँ अपना ऑफिस/साइट का पता जोड़ें)
+          </div>
+
+          <div style="margin-top:12px">
+            <h3 style="margin:8px 0">लोकेशन (मैप)</h3>
+            <!-- Replace src with your Google Maps embed URL -->
+            <iframe style="width:100%;border:0;height:190px;border-radius:8px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..." allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>
+        <div style="font-weight:700">Nirmal Enterprise</div>
+        <div style="font-size:13px;color:#cbd5e1">Shuttering & Formwork Contractor</div>
+      </div>
+      <div style="font-size:14px;color:#cbd5e1">📞 +91 91670 04003 &nbsp; | &nbsp; info@nirmalenterprise.com</div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <div class="floating">
+    <a class="whatsapp" href="https://wa.me/919167004003?text=Namaste%20Nirmal%20Enterprise%20-%20I%20need%20a%20quotation" target="_blank">💬 WhatsApp</a>
+  </div>
+
+  <script>
+    // SIMPLE HERO SLIDER (auto 6s) with dots
+    (function(){
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const dotsWrap = document.getElementById('dots');
+      let idx = 0;
+      const interval = 6000; // 6 seconds
+
+      function renderDots(){
+        slides.forEach((s,i)=>{
+          const d = document.createElement('div'); d.className='dot'+(i===0?' active':''); d.dataset.i=i;
+          d.addEventListener('click',()=>{goTo(i)});
+          dotsWrap.appendChild(d);
+        })
+      }
+      function show(i){
+        slides.forEach((s,si)=>{
+          s.style.opacity = (si===i)?'1':'0';
+        })
+        Array.from(dotsWrap.children).forEach((d,di)=>d.classList.toggle('active', di===i));
+      }
+      function goTo(i){ idx=i; show(idx); }
+      function next(){ idx = (idx+1)%slides.length; show(idx); }
+      renderDots(); show(0);
+      let t = setInterval(next, interval);
+      // pause on hover
+      const slider = document.querySelector('.slider');
+      slider.addEventListener('mouseenter', ()=> clearInterval(t));
+      slider.addEventListener('mouseleave', ()=> t = setInterval(next, interval));
+    })();
+
+    // Gallery lightbox (very small)
+    (function(){
+      const imgs = document.querySelectorAll('.gallery-grid img');
+      imgs.forEach(img=>{
+        img.addEventListener('click', ()=>{
+          const overlay = document.createElement('div');
+          overlay.style.position='fixed';overlay.style.inset=0;overlay.style.background='rgba(0,0,0,0.85)';overlay.style.display='flex';overlay.style.alignItems='center';overlay.style.justifyContent='center';overlay.style.zIndex=1200;
+          const box = document.createElement('div'); box.style.maxWidth='90%'; box.style.maxHeight='90%'; box.style.textAlign='center';
+          const im = document.createElement('img'); im.src = img.src; im.style.maxWidth='100%'; im.style.maxHeight='80vh'; im.style.borderRadius='8px';
+          const caption = document.createElement('div'); caption.style.color='#fff'; caption.style.marginTop='8px'; caption.style.fontSize='14px'; caption.textContent = img.dataset.caption || img.alt || '';
+          box.appendChild(im); box.appendChild(caption);
+          overlay.appendChild(box);
+          overlay.addEventListener('click', ()=> overlay.remove());
+          document.body.appendChild(overlay);
+        })
+      })
+    })();
+
+    // Contact form simple handler (will open mailto) - you can replace with server endpoint
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value.trim());
+      const phone = encodeURIComponent(f.phone.value.trim());
+      const email = encodeURIComponent(f.email.value.trim());
+      const message = encodeURIComponent(f.message.value.trim());
+      const subject = encodeURIComponent('Website Inquiry - '+(name||'New Lead'));
+      const body = encodeURIComponent('Name: '+(name||'N/A')+'\nPhone: '+(phone||'N/A')+'\nEmail: '+(email||'N/A')+'\n\nMessage:\n'+(message||''));
+      // open mail client
+      window.location.href = 'mailto:info@nirmalenterprise.com?subject='+subject+'&body='+body;
+    });
+  </script>
+</body>
+</html>
